@@ -1,0 +1,261 @@
+/*header*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scrollbar-width: none;
+}
+
+body{
+    width: 100%;
+}
+header{
+    background-color:#2A2A2A;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem ;
+}
+.contenedor_head{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    width: 100%;
+}
+.titulo{
+    margin-left: 4px;
+    width: 50vw;
+}
+
+.nav_list{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    gap: 18px;
+}
+.contenedor_navegacion_interno{
+    border: #FFB400 solid 3px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/*main*/
+
+.contenedor{
+    background-color: #2A2A2A;
+    border: solid #FFB400 5px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.contenedor_informacion_breve{
+    display: grid;
+    grid-template-columns: 300px 300px ;
+    grid-template-rows: 170px 170px ;
+    grid-template-areas: "img1  info1 "
+                         "info2  img2";
+}
+
+.primera_imagen{
+    margin-top: 10px;
+    grid-area: img1;
+    background-color: #FFB400;
+    padding: 10px;
+    border-radius: 7px;
+}
+
+.informacion_breve_1{
+    grid-area: info1;
+    margin-top: 10%;
+}
+
+.segunda_imagen{
+    grid-area: img2;
+    background-color: #FFB400;
+    padding: 10px;
+    border-radius: 7px;
+    margin-bottom: 20px;
+}
+
+.informacion_breve_2{
+    grid-area: info2;
+    margin-top: 10%;
+}
+
+.contenedor_main{
+    margin-left: 10%;
+    margin-right: 10%;
+    display: flex;
+    justify-content: center;
+}
+
+.contenedor_informacion_completa{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+
+#parafo{
+    color: white;
+}
+.video_del_servidor{
+    display: flex;
+    justify-content: center;
+}
+.video_del_servidor_real{
+    width: 80%;
+    right: 40%;
+}
+.informacion_completa_final{
+    display: flex;
+    justify-content: center;
+}
+
+.pagina_de_venta{
+    background-color: #2A2A2A;
+    border-radius: 10px;
+    margin-top: 3vw;
+    margin-bottom: 3vw;
+}
+
+.pagina_de_venta a{
+    background-color: #2A2A2A;
+    color: #FFB400;
+    list-style-type: none;
+    text-decoration: none;
+    font-size: 30px;
+}
+/*footer*/
+
+footer{
+    width: 100%;
+}
+
+.contenedor_footer{
+    background-color: #2A2A2A;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.Copyright{
+    color: white;
+}
+
+.redessociales{
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    gap: 15px;
+}
+
+.nombre_de_empresa{
+    color: white;
+    align-self: flex-end;
+    margin-right: 10px;
+}
+
+.abrir-menu, .cerra-menu{
+    display: none;
+}
+
+
+@media (min-width:666px) and (max-width:768px){
+    .primera_imagen {
+        width: 250px;
+    }
+
+    .segunda_imagen{
+        width: 250px;
+    }
+
+    .contenedor_informacion_breve{
+        grid-template-columns: 260px 260px ;
+    }
+}
+
+
+@media (min-width:537px) and (max-width:666px) {
+    .primera_imagen {
+    width: 200px;
+    }
+
+    .segunda_imagen{
+        width: 200px;
+    }
+
+    .contenedor_informacion_breve{
+        grid-template-columns: 210px 210px ;
+        grid-template-rows: 165px 165px;
+    }
+}
+
+
+@media screen and (max-width:600px) {
+    .abrir-menu, .cerra-menu{
+        display: block;
+        border: 0;
+        font-size: 2rem;
+        background-color: transparent;
+        cursor: pointer;
+    }
+
+    .abrir-menu{
+        color: #FFB400;
+        margin-left: 50vw;
+    }
+
+    .cerra-menu{
+        color: #FFB400;
+    }
+
+    .nav{
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background: #2A2A2A;
+        padding: 2rem;
+    }
+
+    .nav.visible{
+    opacity: 1;
+    visibility: visible;
+    }
+    .nav_list{
+        flex-direction: column;
+        align-items: end;
+    }
+} 
+
+
+@media (min-width:320px) and (max-width:537px) {
+    .contenedor_informacion_breve{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .primera_imagen{
+        width: 250px;
+    }
+
+    .informacion_breve_1{
+        margin-top: 10px;
+    }
+    
+    .segunda_imagen{
+        width: 250px;
+        margin-top: 20px;
+    }
+    .informacion_breve_2{
+        margin-top: 0;
+        margin-bottom: 5vw;
+    }
+}
